@@ -1,0 +1,18 @@
+// sass variables
+$primary-color: #f4f1de;
+$secondary-color: #f2cc8f;
+$text-color: #e07a5f;
+
+$alert: (
+    'danger': red,
+    'success': green,
+);
+   
+
+body {
+    background-color: $primary-color;
+}
+
+h1{
+    color: map-get($alert, 'success');
+}
