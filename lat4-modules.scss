@@ -1,0 +1,45 @@
+// @import dan @use: menggunakan mixin di file yang terpisah
+
+@import 'mixin';
+.header {
+    ul{
+        @include inline-list();
+    }
+    li{
+        background-color: violet;
+        padding: 0.7em;
+
+        a{
+            color: aliceblue;
+        }
+    }
+}
+
+.footer ul{
+    @include inline-list();
+    li{
+        padding: 0.4em;
+        background-color: salmon;
+        
+        a{
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+
+.container{
+    @include flex-box(row-reverse, space-between);
+    width: 600px;
+    height: 400px;
+    background-color: aliceblue;
+
+    .box{
+        width: 60px;
+        height: 60px;
+        background-color: aquamarine;
+        text-align: center;
+        line-height: 60px;
+    }
+}
